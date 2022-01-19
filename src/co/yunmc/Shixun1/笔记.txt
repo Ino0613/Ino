@@ -1,0 +1,38 @@
+
+转换流
+    字节流 -->  字符流
+    InputStreamReader  OutputStreamwriter
+        负责把一个字节流转换成字符流,它是字节流和字符流的桥梁
+
+常见的两个流
+    BufferedReader  PrintWriter
+
+    br = new BufferedReader(new FileReader());
+
+    pw = new PrintWriter(new FileWriter());
+
+    br.readLine(); 一次读取一行数据，读取到文件的末尾
+    pw.println(); 一次写出一行数据
+
+网络流
+    -->  网络编程中 物联网环境检测系统
+     采集设备 （客户端） <--->  控制中心（服务器）
+     TCP/IP协议  在java中永远都是面向对象编程
+
+     基于TCP的Socket（套接字对象）编程步骤
+
+     1.服务端
+        ①.创建对象 ServerSocket(int port); ip地址，本机的ip地址
+        ②.accept() 监听连接请求，如果有客户端连接则接受连接，返回通信套接字对象
+                    Socket对象
+        ③.通过Socket对象获取到
+        IO流对象  Socket.getOutputStream   Socket.getInputStream
+                 进行数据的传输
+        ④.通信套接字对象 属于资源，关闭Socket对象
+     2.客户端
+        ①.Socket对象 Socket(String ip,int port);
+        ②.通过Socket对象获取到
+        IO流对象  Socket.getOutputStream  Socket.getInputStream
+                 进行数据的传输
+        ③.关闭Socket对象
+
