@@ -64,6 +64,7 @@ public class Test {
                     break;
                 case 5:
                     System.out.println("显示购物车");
+                    addCartItem();
                     break;
                 case 6:
                     System.out.println("谢谢使用");
@@ -72,6 +73,12 @@ public class Test {
                     System.out.println("请重新输入!");
             }
         }while (true);
+    }
+
+    private static void addCartItem() {
+        //输入要购买的商品的编号
+
+        //输入要购物的商品的数量
     }
 
     /**
