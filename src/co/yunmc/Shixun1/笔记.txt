@@ -35,4 +35,5 @@
         IO流对象  Socket.getOutputStream  Socket.getInputStream
                  进行数据的传输
         ③.关闭Socket对象
-
+     3.运行
+        先启动服务端，再启动客户端
