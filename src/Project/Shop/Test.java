@@ -60,11 +60,11 @@ public class Test {
                     break;
                 case 4:
                     System.out.println("添加到购物车");
-                    showCart();
+                    addCartItem();
                     break;
                 case 5:
                     System.out.println("显示购物车");
-                    addCartItem();
+                    showCart();
                     break;
                 case 6:
                     System.out.println("谢谢使用");
@@ -77,8 +77,26 @@ public class Test {
 
     private static void addCartItem() {
         //输入要购买的商品的编号
+        Scanner sc = new Scanner(System.in);
+        System.out.println("请输入商品编号");
+        int id = sc.nextInt();
 
         //输入要购物的商品的数量
+        System.out.println("请输入要购买的商品数量");
+        int amount = sc.nextInt();
+
+        //根据编号获取商品的其他信息（名称、价格 ）
+        ProductDao productDao = new ProductDaoImpl();
+        Product product = productDao.findById(id);
+        //调用后台添加条目
+        //构建一个购物车条目
+        CartItem item = new CartItem();
+        item.setId(id);
+        item.setName(product.getName());
+        item.setPrice(product.getPrice());
+        item.setAmount(amount);
+        CartItemDao itemDao = new CartItemDaoImpl();
+        itemDao.addCarItem(item);
     }
 
     /**

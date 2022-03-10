@@ -13,7 +13,18 @@ public class CartItemDaoImpl implements CartItemDao {
 
     @Override
     public void addCarItem(CartItem item) {
+        //判断指定编号的条目是否已经存在
+        CartItem item2 = shoppingCart.get(item.getId());
+        if (item2 == shoppingCart.get(item.getId())){
+            int num1 = item.getAmount();
+            int num2 = item2.getAmount();
+            int num = num1 + num2;
+            item2.setAmount(num);
+        }else {
+            //如果存在，修改数量，如果不存在，直接添加条目
+            shoppingCart.put(item.getId(), item);
 
+        }
     }
 
     /**
@@ -22,8 +33,6 @@ public class CartItemDaoImpl implements CartItemDao {
     @Override
     public LinkedHashMap<Integer , CartItem> findCart(){
         //假设购物车中之前有两个条目
-        shoppingCart.put(1111,new CartItem(1111,"皮鞋",238,1));
-        shoppingCart.put(2222,new CartItem(2222,"Ino",2380,2));
 
         return shoppingCart;
     }
