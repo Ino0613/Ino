@@ -10,7 +10,7 @@ public class PingPangPlayer extends Player implements SpeakEnglish{
 
     @Override
     public void eat() {
-        System.out.println("乒乓球运动员吃");
+        System.out.println("乒乓球运动员吃a");
     }
 
     @Override

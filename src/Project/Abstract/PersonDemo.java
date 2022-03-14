@@ -12,6 +12,5 @@ public class PersonDemo {
         ppp.eat();
         ppp.speak();
         ppp.study();
-        ppp.study();
     }
 }
