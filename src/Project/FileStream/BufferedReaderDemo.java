@@ -2,7 +2,7 @@ package Project.FileStream;
 
 import java.io.*;
 
-public class BufferedStreamDemo1 {
+public class BufferedReaderDemo {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("D:\\Ino\\Ino\\1.txt"));
         BufferedWriter bw = new BufferedWriter(new FileWriter("D:\\Ino\\Ino\\Test.txt"));
