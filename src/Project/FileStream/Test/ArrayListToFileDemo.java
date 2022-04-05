@@ -25,7 +25,7 @@ import java.util.ArrayList;
         8.调用字符缓冲输出流对象的方法写数据
         9.释放资源
  */
-public class StudentDemo1 {
+public class ArrayListToFileDemo {
     public static void main(String[] args) throws IOException {
         //创建学生对象
         ArrayList<Student> arr = new ArrayList<Student>();
