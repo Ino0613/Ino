@@ -1,4 +1,4 @@
-package Project.FileStream;
+package Project.FileStream.Test;
 
 import java.io.*;
 /*

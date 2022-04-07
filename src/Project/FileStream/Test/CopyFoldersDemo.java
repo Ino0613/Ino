@@ -19,18 +19,18 @@ package Project.FileStream.Test;
 import java.io.*;
 
 public class CopyFoldersDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         //创建数据源File对象，路径是E:\\Ino\\Test
         File srcFile = new File("E:\\Ino\\Test");
         //创建目的地File对象，路径是D:\\Ino\\Ino\\Test
-        File destFile = new File("D:\\Ino\\Ino\\Test");
+        File destFile = new File("D:\\Ino\\Ino");
 
         //写方法实现文件夹的赋值，参数为数据源File对象和目的地File对象
-        CopyFolder(srcFile, destFile);
+        copyFolder(srcFile, destFile);
     }
 
     //复制文件夹
-    private static void CopyFolder(File srcFile, File destFile) {
+    private static void copyFolder(File srcFile, File destFile) throws IOException{
         //判断数据源File是否是目录
         if (srcFile.isDirectory()) {
             String srcFileName = srcFile.getName();
@@ -43,8 +43,16 @@ public class CopyFoldersDemo {
             File[] listfiles = srcFile.listFiles();
 
             //遍历该File数组
-
+            for (File f : listfiles) {
+                //把该File作为数据源File对象，递归调用复制文件夹的方法
+                copyFolder(f,newFolder);
+            }
+        }else{
+            //说明是文件，直接复制，用字节流
+            File newFile = new File(destFile, srcFile.getName());
+            copyFile(srcFile,newFile);
         }
+
     }
 
     //字节缓冲流复制文件

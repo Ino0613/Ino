@@ -2,33 +2,27 @@ package Project.FileStream;
 
 import java.io.*;
 
-/*
-    需求:
-        把模块目录下的 .java文件复制到模块目录下的Copy.java
-
-    思路：
-        1.根据数据源创建字符输入流对象
-        2.根据目的地创建字符输出流对象
-        3.读写数据，复制文件
-        4.释放资源
- */
 public class CopyJavaDemo1 {
     public static void main(String[] args) throws IOException {
-        InputStreamReader isr = new InputStreamReader(new FileInputStream("D:\\Ino\\Ino\\Test.java"));
-        OutputStreamWriter osw = new OutputStreamWriter(new FileOutputStream("D:\\Ino\\Ino\\Test1.java"));
+//        BufferedReader br = new BufferedReader(new FileReader("D:\\Ino\\Ino\\Test.java"));
+//        BufferedWriter bw = new BufferedWriter(new FileWriter("D:\\Ino\\Ino\\Test2.java"));
 
-//        int by ;
-//        while ((by = isr.read()) != -1) {
-//            osw.write(by);
+//        String line;
+//        while ((line = br.readLine()) != null) {
+//            bw.write(line);
+//            bw.newLine();
+//            bw.flush();
 //        }
-//        osw.close();
-//        isr.close();
-        char[] chs = new char[1024];
-        int len;
-        while ((len = isr.read(chs)) != -1) {
-            osw.write(chs,0,len);
+//        bw.close();
+//        br.close();
+        BufferedReader br = new BufferedReader(new FileReader("D:\\Ino\\Ino\\Test.java"));
+        PrintWriter pw = new PrintWriter(new FileWriter("D:\\Ino\\Ino\\Test2.java"),true);
+        String line;
+        while ((line = br.readLine()) != null) {
+            pw.println(line);
         }
-        osw.close();
-        isr.close();
+        pw.close();
+        br.close();
+
     }
 }
