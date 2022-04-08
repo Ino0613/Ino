@@ -17,7 +17,7 @@ public class propertiesDemo1 {
         for (String key : names) {
             String value = prop.getProperty(key);
             System.out.println(key + "," + value);
-
+            System.out.println(value);
         }
 
     }
