@@ -3,7 +3,7 @@ package Project.File;
 import java.util.Properties;
 import java.util.Set;
 
-public class propertiesDemo1 {
+public class PropertiesDemo1 {
     public static void main(String[] args) {
         Properties prop = new Properties();
         prop.setProperty("2020210121", "王林");
