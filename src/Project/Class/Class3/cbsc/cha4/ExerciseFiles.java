@@ -56,10 +56,10 @@ public class ExerciseFiles {
 	}
 
 	private void writeCSVExercises(short fileCounter, String fileNameStub, Exercise_3_2_3 exercise) {
-		File wfile;
+		File wfile1;
 		Writer out;
 		for (int i = 1; i <= fileCounter; i++) {
-			wfile = new File(fileNameStub + i + ".txt");
+			wfile1 = new File(fileNameStub + i + ".txt");
 			try {
 				//out = new FileWriter(wfile, true);
 				//file：要写入数据的 File 对象。
