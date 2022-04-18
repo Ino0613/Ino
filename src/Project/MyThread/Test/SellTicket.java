@@ -27,6 +27,7 @@ public class SellTicket implements Runnable{
                 }else {
                     sellTicket();
                 }
+                x--;
                 x++;
         }
 
