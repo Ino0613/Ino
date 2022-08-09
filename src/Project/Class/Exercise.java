@@ -9,7 +9,9 @@ public class Exercise {
     private static void print (String str){
         System.out.print(str);
     }
+    protected  void a(){
 
+    }
     public static void main(String[] args) {
         Exercise ec = new Exercise();
         System.out.println("屏幕显示50道加法运算题：");

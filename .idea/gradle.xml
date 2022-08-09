@@ -7,7 +7,7 @@
         <option name="delegatedBuild" value="true" />
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/../../Program Files/" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../../Ino" />
       </GradleProjectSettings>
     </option>
   </component>

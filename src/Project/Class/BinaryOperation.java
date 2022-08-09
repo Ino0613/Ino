@@ -2,7 +2,7 @@ package Project.Class;
 
 import java.util.Random;
 
-public class BinaryOperation {
+public class BinaryOperation extends Exercise{
     static final int UPPER = 100;
     static final int LOWER = 0;
     int left,right,result;
@@ -10,10 +10,12 @@ public class BinaryOperation {
     private char operator = '+';
     private int value = 0;
 
+
     public static void main(String[] args) {
         BinaryOperation bo = new BinaryOperation();
         int a = bo.construct(1,3,'+');
         System.out.println(a);
+        
     }
 
     private int construct(int left, int right, char op) {

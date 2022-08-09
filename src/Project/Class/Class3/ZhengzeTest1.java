@@ -3,40 +3,41 @@ package Project.Class.Class3;
 public class ZhengzeTest1 {
 
     public static void test(){
-        //æ¶ˆé™¤å¤šä½™çš„å­—ç¬¦
-        String testCases = "å¥‡æ€ªçš„å­—ç¬¦ä¸²51+11," +
+        //Ïû³ı¶àÓàµÄ×Ö·û
+        String testCases = "Ææ¹ÖµÄ×Ö·û´®51+11," +
                 "[ 19+  A 45," +
-                " 92+8,         ?80+19,         73+10;ä½ èƒ½å¾—åˆ°æ­£ç¡®ç»“æœå—?";
+                " 92+8,         ?80+19,         73+10;ÄãÄÜµÃµ½ÕıÈ·½á¹ûÂğ?";
         String temp = testCases.replaceAll("[\\s\\D\\p{Punct}&&[^\\,+-]]", "");
         for (String s : temp.split("\\,")) {
             System.out.println(s);
         }
     }
     public static void main(String[] args) {
-        test2();
-        stairAccess2(60);
+        test();
+//        test2();
+//        stairAccess2(60);
     }
     public static void test2(){
         int[] score = {-120, 98, 89, 120, 99};
         int sum = 0;
         for (int number : score) {
-            assert number > 0 : "è´Ÿæ•°ä¸èƒ½æ˜¯æˆç»©";
+            assert number > 0 : "¸ºÊı²»ÄÜÊÇ³É¼¨";
             sum += number;
         }
-        System.out.println("æ€»æˆç»©:" + sum);
+        System.out.println("×Ü³É¼¨:" + sum);
     }
 
     public static void stairAccess2(int score){
-        String[] grades = {"ä¸åŠæ ¼", "åŠæ ¼", "ä¸­ç­‰", "è‰¯å¥½", "ä¼˜ç§€"};
+        String[] grades = {"²»¼°¸ñ", "¼°¸ñ", "ÖĞµÈ", "Á¼ºÃ", "ÓÅĞã"};
         int[] ranges = {60, 70, 80, 90, 100};
         int maxLevel = grades.length - 1; //4
         int gradesLevel = 0;
-        String grade = "ä¸åŠæ ¼";
+        String grade = "²»¼°¸ñ";
         while (gradesLevel <= maxLevel && score > ranges[gradesLevel]) {
             gradesLevel++;
         }
         grade = grades[gradesLevel];
         System.out.println(maxLevel);
-        System.out.println(score + "åˆ†å¯¹åº”çš„æˆç»©" + grade + ".");
+        System.out.println(score + "·Ö¶ÔÓ¦µÄ³É¼¨" + grade + ".");
     }
 }

@@ -1,28 +1,31 @@
 package Project.Class.Class4;
 
 import javax.swing.*;
-import javax.swing.plaf.basic.BasicOptionPaneUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class HealthCalculator extends JFrame implements ActionListener {
-
+    //¶¨ÒåÎÄ±¾¿ò×é¼ş
     JTextField height,weight;
+    //¶¨ÒåÎÄ±¾Óò×é¼ş
     JTextArea result;
+    //¶¨Òå°´Å¥×é¼ş
     JButton calculate,clear;
-    BasicOptionPaneUI.ButtonActionListener listener;
 
     public HealthCalculator(){
+        //ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷
         setLayout(new FlowLayout());
         height = new JTextField(10);
         weight = new JTextField(10);
-        weight.setText("è¾“å…¥ä½“é‡ (å…¬æ–¤)");
-        height.setText("è¾“å…¥èº«é«˜ (cm)");
+        //ÉèÖÃÎÄ±¾ÄÚÈİ
+        weight.setText("ÊäÈëÌåÖØ (¹«½ï)");
+        height.setText("ÊäÈëÉí¸ß (cm)");
         add(height);
         add(weight);
-        calculate = new JButton("è®¡ç®—");
-        clear = new JButton("æ¸…é›¶");
+        //ÉèÖÃ°´Å¥ÄÚÈİ
+        calculate = new JButton("¼ÆËã");
+        clear = new JButton("ÇåÁã");
         add(calculate);
         add(clear);
 
@@ -32,11 +35,14 @@ public class HealthCalculator extends JFrame implements ActionListener {
         calculate.addActionListener(this);
         clear.addActionListener(this);
     }
-
+    //×¢²á¶¯×÷ÊÂ¼ş¼àÌıÆ÷
     @Override
     public void actionPerformed(ActionEvent e) {
+        //¶¨Òå°´Å¥
         JButton button = (JButton) e.getSource();
-        if (button.getText() == "è®¡ç®—") {
+        //ÅĞ¶Ï°´Å¥µÄÎÄ±¾Èç¹ûµÈÓÚ¼ÆËã
+        if (button.getText() == "¼ÆËã") {
+            //Ê¹ÓÃtry-catchÓï¾ä·ÀÖ¹Êı¾İÒì³£
             try {
                 double h = Double.parseDouble(height.getText());
                 double w = Double.parseDouble(weight.getText());
@@ -44,27 +50,29 @@ public class HealthCalculator extends JFrame implements ActionListener {
                 //String showTest;
                 r = (int) (100 * 100 * w / h / h);
                 if (r < 20) {
-                    result.append("BMI=" + r + "\n" + "å¤ªè½»äº†ï¼Œè¦è¡¥å……è¥å…»ã€‚");
+                    result.append("BMI=" + r + "\n" + "Ì«ÇáÁË£¬Òª²¹³äÓªÑø¡£");
                 } else if (r <= 25) {
-                    result.append("BMI=" + r + "\n" + "æ­å–œä½ ï¼Œæ ‡å‡†ä½“å‹ï¼");
+                    result.append("BMI=" + r + "\n" + "¹§Ï²Äã£¬±ê×¼ÌåĞÍ£¡");
                 } else
-                    result.append("BMI=" + r + "\n" + "è¿‡äºè‚¥èƒ–ï¼Œè¦å‡è‚¥åŠ å¼ºé”»ç‚¼!");
+                    result.append("BMI=" + r + "\n" + "¹ıÓÚ·ÊÅÖ£¬Òª¼õ·Ê¼ÓÇ¿¶ÍÁ¶!");
                 result.append("\n");
             } catch (Exception exception) {
-                result.setText("èº«é«˜å’Œä½“é‡åªèƒ½æ˜¯æ•°å­—ï¼");
+                result.setText("Éí¸ßºÍÌåÖØÖ»ÄÜÊÇÊı×Ö£¡");
             }
         }else{
-            weight.setText("è¾“å…¥ä½“é‡ (å…¬æ–¤)");
-            height.setText("è¾“å…¥èº«é«˜ (cm)");
+            weight.setText("ÊäÈëÌåÖØ (¹«½ï)");
+            height.setText("ÊäÈëÉí¸ß (cm)");
         }
     }
-
+    //ÓÃmain·½·¨ÔËĞĞ
     public static void main(String[] args) {
         HealthCalculator win = new HealthCalculator();
-        win.setTitle("å¥åº·è®¡ç®—å™¨");
+        //ÉèÖÃ×é¼ş±êÌâ
+        win.setTitle("½¡¿µ¼ÆËãÆ÷");
+        //ÉèÖÃ×é¼ş´óĞ¡
         win.setSize(500, 280);
+        //ÏÔÊ¾×é¼ş
         win.setVisible(true);
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 }
