@@ -6,12 +6,13 @@ public class NumberToChinese {
     public NumberToChinese() {
 
     }
-
+    //¶¨ÒåÒ»¸öº¬ÓĞ²ÎÊıµÄ·½·¨
     public String numberToChinese(int n) {
+        //ÅĞ¶Ï¸ÃÊıÊÇ·ñÔÚ32Î»ÕıÕûÊı·¶Î§ÄÚ
         if (Integer.MAX_VALUE < n || n < 0) {
-            throw new RuntimeException(n + "ä¸åœ¨32ä½æ­£æ•´æ•°èŒƒå›´å†…");
+            throw new RuntimeException(n + "²»ÔÚ32Î»ÕıÕûÊı·¶Î§ÄÚ");
         }
-
+        //½øĞĞÅĞ¶ÏnµÄ´óĞ¡
         String infor = "";
         if (n < 10) {
             infor += basicNumber(n);
@@ -21,7 +22,7 @@ public class NumberToChinese {
             infor += hunderedNumber(n);
         } else if (n < 10000) {
             infor +=thousandsNumber(n);
-            infor = infor.replaceAll("é›¶+", "é›¶");
+            infor = infor.replaceAll("Áã+", "Áã");
         } else if (n < 100000000) {
             infor = wansNumber(n);
             infor = clearChineseZeros(infor);
@@ -29,9 +30,9 @@ public class NumberToChinese {
             int yis = n / 100000000;
             int rest = n - yis * 100000000;
             if (yis != 0) {
-                infor += tensNumber(yis) + "äº¿";
+                infor += tensNumber(yis) + "ÒÚ";
             }else
-                infor += "é›¶";
+                infor += "Áã";
             if (rest != 0) {
                 infor += wansNumber(rest);
             }
@@ -41,10 +42,10 @@ public class NumberToChinese {
     }
 
     private String clearChineseZeros(String infor) {
-        //åˆ é™¤é‡å¤çš„é›¶
-        infor = infor.replaceAll("é›¶+", "é›¶");
-        //å»æ‰å¤´éƒ¨çš„é›¶
-        if (infor.indexOf("é›¶") == 0) {
+        //É¾³ıÖØ¸´µÄÁã
+        infor = infor.replaceAll("Áã+", "Áã");
+        //È¥µôÍ·²¿µÄÁã
+        if (infor.indexOf("Áã") == 0) {
             infor = infor.substring(1);
         }
         return infor;
@@ -55,9 +56,9 @@ public class NumberToChinese {
         int wans = n / 10000;
         int rest = n - wans * 10000;
         if (wans != 0) {
-            infor += thousandsNumber(wans) + "ä¸‡";
+            infor += thousandsNumber(wans) + "Íò";
         }else
-            infor += "é›¶";
+            infor += "Áã";
         if (rest != 0) {
             infor += thousandsNumber(rest);
         }
@@ -69,9 +70,9 @@ public class NumberToChinese {
         int thousands = n / 1000;
         int rest = n - thousands * 1000;
         if (thousands != 0) {
-            infor += basicNumber(thousands) + "ä»Ÿ";
+            infor += basicNumber(thousands) + "Çª";
         }else
-            infor += "é›¶";
+            infor += "Áã";
         if (rest != 0) {
             infor += hunderedNumber(rest);
         }
@@ -83,9 +84,9 @@ public class NumberToChinese {
         int hundereds = n / 100;
         int rest = n - hundereds * 100;
         if (hundereds != 0) {
-            infor += basicNumber(hundereds) + "ä½°";
+            infor += basicNumber(hundereds) + "°Û";
         }else
-            infor += "é›¶";
+            infor += "Áã";
         if (rest != 0) {
             infor += tensNumber(rest);
         }
@@ -100,9 +101,9 @@ public class NumberToChinese {
         int units = n % 10;
         int tens = n / 10;
         if (tens != 0) {
-            infor += basicNumber(tens) + "æ‹¾";
+            infor += basicNumber(tens) + "Ê°";
         }else
-            infor += "é›¶";
+            infor += "Áã";
         if (units != 0) {
             infor += basicNumber(units);
         }
@@ -113,34 +114,34 @@ public class NumberToChinese {
         String infor = "";
         switch (n) {
             case 0:
-                infor += "é›¶";
+                infor += "Áã";
                 break;
             case 1:
-                infor += "å£¹";
+                infor += "Ò¼";
                 break;
             case 2:
-                infor += "è´°";
+                infor += "·¡";
                 break;
             case 3:
-                infor += "å";
+                infor += "Èş";
                 break;
             case 4:
-                infor += "è‚†";
+                infor += "ËÁ";
                 break;
             case 5:
-                infor += "ä¼";
+                infor += "Îé";
                 break;
             case 6:
-                infor += "é™†";
+                infor += "Â½";
                 break;
             case 7:
-                infor += "æŸ’";
+                infor += "Æâ";
                 break;
             case 8:
-                infor += "æŒ";
+                infor += "°Æ";
                 break;
             case 9:
-                infor += "ç–";
+                infor += "¾Á";
                 break;
         }
         return infor;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1.导入sprint的坐标spring-context-->
+
+    <!--2.配置bean-->
+    <!--方法一: 构造方法实例化bean-->
+    <bean id="bookDao" class="cc.yunmc.dao.impl.BookDaoImpl" init-method="init" destroy-method="destroy"/>
+    <bean id="bookService" class="cc.yunmc.service.impl.BookServiceImpl">
+    <!--7.配置Server与dao的关系-->
+        <property name="bookDao" ref="bookDao"/>
+    </bean>
+
+    <!--方法二: 使用静态工厂实例化bean-->
+    <bean id="daoFactory" class="cc.yunmc.service.impl.OrderDaoFactory" factory-method="getOrderDao"/>
+
+    <!--方法三: 使用实例工厂实例化bean-->
+    <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>
+    <bean id="userFactory" class="cc.yunmc.service.impl.UserDaoFactory"/>
+</beans>

@@ -4,27 +4,27 @@ public class TryAssertionsDemo {
     public String constructOperation(int l, int r, char op) {
         int value = 0;
 
-        assert 0 <= l && l <= 100 : "å·¦è¿ç®—æ•°ä¸åœ¨0~100çš„èŒƒå›´.";
-        assert 0 <= r && r <= 100 : "å³è¿ç®—æ•°ä¸åœ¨0~100çš„èŒƒå›´.";
+        assert 0 <= l && l <= 100 : "×óÔËËãÊý²»ÔÚ0~100µÄ·¶Î§.";
+        assert 0 <= r && r <= 100 : "ÓÒÔËËãÊý²»ÔÚ0~100µÄ·¶Î§.";
         if (op == '+') {
             value = l + r;
-            assert 0 <= value && value <= 100 : "åŠ æ³•è¿ç®—ç»“æžœä¸åœ¨0~100çš„èŒƒå›´.";
+            assert 0 <= value && value <= 100 : "¼Ó·¨ÔËËã½á¹û²»ÔÚ0~100µÄ·¶Î§.";
         } else if (op == '-') {
             value = l - r;
-            assert 0 <= value && value <= 100 : "å‡æ³•è¿ç®—ç»“æžœä¸åœ¨0~100çš„èŒƒå›´.";
+            assert 0 <= value && value <= 100 : "¼õ·¨ÔËËã½á¹û²»ÔÚ0~100µÄ·¶Î§.";
         }else{
-            assert false : op + "ä¸æ˜¯åŠ æ³•æˆ–å‡æ³•è¿ç®—ç¬¦!";
+            assert false : op + "²»ÊÇ¼Ó·¨»ò¼õ·¨ÔËËã·û!";
         }
-        return "ç®—å¼" + l + op + r + "çš„è¿ç®—ç»“æžœæ˜¯" + value;
+        return "ËãÊ½" + l + op + r + "µÄÔËËã½á¹ûÊÇ" + value;
     }
 
     public static void main(String[] args) {
         TryAssertionsDemo ta = new TryAssertionsDemo();
-        System.out.println("æ­£å¸¸çš„åŠ æ³•è¿ç®—:");
+        System.out.println("Õý³£µÄ¼Ó·¨ÔËËã:");
         System.out.println(ta.constructOperation(50, 20, '+'));
-        System.out.println("æ­£å¸¸çš„å‡æ³•è¿ç®—:");        System.out.println(ta.constructOperation(50, 20, '+'));
+        System.out.println("Õý³£µÄ¼õ·¨ÔËËã:");        System.out.println(ta.constructOperation(50, 20, '+'));
         System.out.println(ta.constructOperation(50, 20, '-'));
-        System.out.println("è¯•éªŒæ–­è¨€:");
+        System.out.println("ÊÔÑé¶ÏÑÔ:");
         System.out.println(ta.constructOperation(50, 20, '@'));
 
     }

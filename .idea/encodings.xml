@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/Project/AS.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Class3/TryAssertionsDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Class3/ZhengzeDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Class3/ZhengzeTest1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Class4/HealthCalculator.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Class4/NumberToChinese.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object1/Land.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object1/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object1/Vehicle.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object1/Village.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object2/PlainRectTest.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/Company.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/CompanyTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/Four/Application.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/Four/Cat.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/Four/Dog.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/MouthWorker.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/WeekWorker.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/Object3/YearWorker.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/AdditionOperation.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/BinaryOperationTester.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/BinaryOperationTester3_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/BinaryOperationTester3_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/BinaryOperation_3_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/BinaryOperation_3_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/ExerciseSheet_3_2_3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/ExerciseSheet_3_2_5.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/ExerciseSheet_3_3_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/ExerciseSheet_3_3_3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/Exercise_3_1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/Exercise_3_2_2.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/Exercise_3_2_3.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/Exercise_3_2_4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/cbsc/cha3/Exercise_3_2_cha7.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/ch8/PractiseGUI.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/ch8/code8_12.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/ch8/code8_13.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/ch8/code8_4.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/Class/chap8/ch8/code8_5.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/GuessNumber/PropertiesTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/RunnableDemo/MyRunnable.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/Project/RunnableDemo/Test1/Eatable.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/RunnableDemo/Test1/EatableDemo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/RunnableDemo/Test1/EatableImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Project/RunnableDemo/Test2/FlyableDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/test.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

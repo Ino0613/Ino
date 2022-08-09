@@ -11,6 +11,8 @@ public class AdapterTester {
         list.add(ph);
         Printer pt = new AdapterT(new Printer_T());
         list.add(pt);
+        Printer pp = new AdapterP(new Printer_P());
+        list.add(pp);
         for (Printer printer : list) {
             printer.print();
         }
@@ -32,6 +34,7 @@ class Printer_H {
         System.out.println("Type H printer is printing");
     }
 }
+
 //适配器类1
 class AdapterH extends Printer_H implements Printer {
     public void print() {
@@ -58,8 +61,23 @@ class AdapterT implements Printer {
         printer.display();
     }
 }
+class Printer_P {
+    public void display() {
+        System.out.println("Type P printer is printing");
+    }
+}
 
+//适配器类2
+class AdapterP implements Printer {
+    private final Printer_P printer;
 
+    public AdapterP(Printer_P printer) {
+        this.printer = printer;
+    }
 
+    public void print() {
+        printer.display();
+    }
+}
 
 

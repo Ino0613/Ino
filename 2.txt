@@ -1,1 +1,2 @@
-a
+classname = Project.ClassLoad.Teacher
+method = teach
