@@ -50,7 +50,10 @@ public class Student {
                 ", address='" + address + '\'' +
                 '}';
     }
+<<<<<<< HEAD
     public void study(){
         System.out.println("我爱学习");
     }
+=======
+>>>>>>> origin/master
 }
