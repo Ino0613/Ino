@@ -7,8 +7,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppForLifeCycle {
     public static void main(String[] args) {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+        ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+        ac.afterPropertiesSet();
         BookDao bookDao = (BookDao) ac.getBean("bookDao");
         bookDao.save();
+        ac.registerShutdownHook();
+//        ac.close();
     }
 }

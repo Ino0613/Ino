@@ -1,8 +1,10 @@
 package cc.yunmc.dao.impl;
 
 import cc.yunmc.dao.BookDao;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class BookDaoImpl implements BookDao {
+public class BookDaoImpl implements BookDao, InitializingBean, DisposableBean {
 
     @Override
     public void save() {
@@ -14,7 +16,15 @@ public class BookDaoImpl implements BookDao {
 
     }
 
-    public void destroy(){
-        System.out.println("destroy...");
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("service destroy...");
     }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("service init...");
+    }
+
+
 }
