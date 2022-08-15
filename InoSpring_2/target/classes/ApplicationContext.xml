@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+
+
+<!--    <bean id="userDao" class="cc.yunmc.dao.impl.UserDaoImpl"/>-->
+<!--    <bean id="bookDao" class="cc.yunmc.dao.impl.BookDaoImpl">-->
+<!--        <property name="databaseName" value="mysql"/>-->
+<!--        <property name="connectionNum" value="10"/>-->
+<!--    </bean>-->
+    <bean id="bookDao" class="cc.yunmc.dao.impl.BookDaoImpl">
+        <property name="array">
+            <array>
+                <value>100</value>
+                <value>200</value>
+                <value>300</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <value>100</value>
+                <value>200</value>
+                <value>300</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>ino</value>
+                <value>ino1</value>
+                <value>ino11</value>
+                <value>ino11</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="country" value="china"/>
+                <entry key="province" value="Shanxi"/>
+                <entry key="city" value="HongTong"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="country">中国</prop>
+                <prop key="province">山西省</prop>
+                <prop key="city">洪洞县</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="userDao" class="cc.yunmc.dao.impl.UserDaoImpl"/>
+        <!-- 第一种 -->
+<!--        <constructor-arg name="databaseName" value="mysql"/>-->
+<!--        <constructor-arg name="connectionNum" value="10"/>-->
+        <!-- 第二种 -->
+<!--        <constructor-arg type="java.lang.String" value="mysql"/>-->
+<!--        <constructor-arg type="int" value="10"/>-->
+<!--        <constructor-arg index="1" value="mysql"/>-->
+<!--        <constructor-arg index="0" value="10"/>-->
+    <bean id="bookService" class="cc.yunmc.service.impl.BookServiceImpl" autowire="byType">
+<!--        <property name="bookDao" ref="bookDao"/>-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--        <constructor-arg name="bookDao" ref="bookDao"/>-->
+<!--        <constructor-arg name="userDao" ref="userDao"/>-->
+    </bean>
+
+</beans>
