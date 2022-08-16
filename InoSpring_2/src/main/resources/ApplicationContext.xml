@@ -10,8 +10,8 @@
        http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 
 
-    <!--    <bean id="userDao" class="cc.yunmc.dao.impl.UserDaoImpl"/>-->
-    <!--    <bean id="bookDao" class="cc.yunmc.dao.impl.BookDaoImpl">-->
+        <bean id="userDao" class="cc.yunmc.dao.impl.UserDaoImpl"/>
+        <bean id="bookDao" class="cc.yunmc.dao.impl.BookDaoImpl"/>
     <!--        <property name="databaseName" value="mysql"/>-->
     <!--        <property name="connectionNum" value="10"/>-->
     <!--    </bean>-->
@@ -57,7 +57,7 @@
     <!--    </bean>-->
 
 
-    <bean id="userDao" class="cc.yunmc.dao.impl.UserDaoImpl"/>
+<!--    <bean id="userDao" class="cc.yunmc.dao.impl.UserDaoImpl"/>-->
 
 
     <!-- 第一种 -->
@@ -75,8 +75,11 @@
     <!--        <constructor-arg name="userDao" ref="userDao"/>-->
     <!--    </bean>-->
 
-    <context:property-placeholder location="classpath:jdbc.properties"/>
-    <bean id="bookService" class="cc.yunmc.service.impl.BookServiceImpl">
-
+<!--    <context:property-placeholder location="classpath:jdbc.properties"/>-->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="jdbc_driverClassname"/>
+        <property name="url" value="jdbc_url"/>
+        <property name="username" value="jdbc_username"/>
+        <property name="password" value="jdbc_password"/>
     </bean>
 </beans>
