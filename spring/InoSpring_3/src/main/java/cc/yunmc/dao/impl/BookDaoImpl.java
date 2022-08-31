@@ -9,15 +9,17 @@ import org.springframework.stereotype.Repository;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Repository("bookDao")
-@Scope("singleton")
-
+@Repository
 public class BookDaoImpl implements BookDao {
-    @Value("Ino")
-    private String name;
+
     @Override
     public void save() {
-        System.out.println("Book Dao save... " + name);
+        System.out.println(System.currentTimeMillis());
+        System.out.println("Book Dao save... ");
+    }
+
+    public void update(){
+        System.out.println("Book Dao update...");
     }
 //    @PostConstruct
 //    public void init() {

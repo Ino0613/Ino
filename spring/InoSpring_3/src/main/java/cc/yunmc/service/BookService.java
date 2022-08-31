@@ -1,5 +1,5 @@
-package cc.yunmc.service;
-
-public interface BookService {
-    void save();
-}
+//package cc.yunmc.service;
+//
+//public interface BookService {
+//    void save();
+//}
