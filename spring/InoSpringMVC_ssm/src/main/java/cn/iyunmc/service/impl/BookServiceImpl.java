@@ -22,24 +22,23 @@ public class BookServiceImpl implements BookService {
     @Override
     public boolean update(Book book) {
         bookDao.update(book);
-        return false;
+        return true;
     }
 
     @Override
     public boolean delete(Integer id) {
         bookDao.delete(id);
-        return false;
+        return true;
     }
 
     @Override
     public Book getById(Integer id) {
-        bookDao.getById(id);
-        return null;
+        return bookDao.getById(id);
     }
 
     @Override
     public List<Book> getAll() {
-        bookDao.getAll();
-        return null;
+
+        return bookDao.getAll();
     }
 }
