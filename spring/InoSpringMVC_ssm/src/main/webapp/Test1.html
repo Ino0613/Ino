@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script>-->
+<!--      alert("测试 JavaScript!")-->
+<!--    </script>-->
+</head>
+<body>
+<form id="reg-form" action="#" method="get">
+
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td class="inputs">
+                <input name="username" type="text" id="username">
+                <br>
+                <span id="username_err" class="err_msg" style="display: none ">用户名不太受欢迎</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>密码</td>
+            <td class="inputs">
+                <input name="password" type="text" id="password">
+                <br>
+                <span id="password_err" class="err_msg" style="display: none ">密码格式有误</span>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+<script>
+    //1.验证用户名是否符合规则
+    //1.1获取用户名的输入框
+    var usernameInput = document.getElementById("username");
+
+    //1.2绑定onblur事件 失去焦点
+    usernameInput.onblur = function () {
+        //1.3获取用户输入的用户名
+        var username = usernameInput.value.trim();
+
+        //1.4判断用户名是否符合规则 长度6-12
+        if (username.length >= 6 && username.length <= 12) {
+            document.getElementById("username_err").style.display = 'none';
+        }else{
+            document.getElementById("username_err").style.display = '';
+    }
+    }
+</script>
+</body>
+</html>
+
